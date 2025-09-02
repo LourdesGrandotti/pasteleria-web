@@ -1,0 +1,166 @@
+/* Fuente general */
+body {
+  font-style: 'Segoe UI';
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0; /* color crema pastel */
+  color: black;
+}
+/* Encabezado con el nombre de la pastelería*/
+.logo {
+  height: 150px;
+  width: 150px;
+  margin-right: 20px;/* Logo a la izquierda */
+}
+header {
+  background-color: #f7c6d9; /* rosa pastel */
+  text-align: center;
+  padding: 20px;
+  display: flex;
+}
+
+/* --- Header: logo a la izquierda, nav centrado --- */
+header{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* izq | centro | der */
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Logo queda a la izquierda */
+.logo{
+  grid-column: 1;
+  justify-self: center;
+  width: 140px;           
+}
+
+/* NAV al centro (columna del medio) y en columna */
+.nav{
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centra horizontal */
+  text-align: center;      /* centra texto */
+}
+
+.nav__nombre{ margin: 0 0 4px; font-size: 2rem; }
+.nav__slogan{ margin: 0 0 12px; font-size: 1.1rem; }
+
+/* Links centrados en línea */
+.nav-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 14px;
+}
+.nav-links a{ text-decoration: none; font-weight: 600; }
+
+.nav-links a:hover {
+  color: #b03c64; /* rosado más oscuro */
+}
+
+/* Secciones */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+section h2 {
+  color: #b03c64;
+  margin-bottom: 20px;
+}
+
+/* Imágenes */
+img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Lista de productos */
+#productos ul {
+  list-style: none;
+  padding: 0;
+}
+
+#productos li {
+  background: #ffe6eb;
+  margin: 15px auto;
+  padding: 15px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+#productos h3 {
+  margin: 0;
+  color: #7a1e46;
+}
+
+/* Formulario de contacto */
+form {
+  max-width: 400px;
+  margin: auto;
+  background: #fdf2f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: #f7c6d9;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e5a7c1;
+}
+
+/* Footer */
+.footer {
+  background-color: #f7c6d9;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+/* Ajuste en celulares */
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr; /* Solo una columna */
+    text-align: center;
+  }
+
+  .logo {
+    grid-column: 1;
+    justify-self: center; /* Centra el logo */
+    width: 120px; /* opcional: achicar un poco en celular */
+  }
+
+  .nav {
+    grid-column: 1;
+  }
+}
